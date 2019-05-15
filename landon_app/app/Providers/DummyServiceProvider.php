@@ -14,7 +14,7 @@ class DummyServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        echo 'Register';
+        //echo 'Register';
     }
 
     /**
@@ -25,6 +25,6 @@ class DummyServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        echo 'Boot';
+        //echo 'Boot';
     }
 }
