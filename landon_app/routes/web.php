@@ -33,6 +33,11 @@ Route::get('/home', function () {
 
 Route::get('/di', 'ClientController@di');
 
+Route::get('/facades/db', function () {
+    return DB::select('SELECT * from table');
+    //error no db configured
+});
+
 
 
 
