@@ -31,6 +31,8 @@ Route::get('/home', function () {
     return view('welcome', $data);
 });
 
+Route::get('/di', 'ClientController@di');
+
 
 
 
