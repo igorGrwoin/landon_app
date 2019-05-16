@@ -20,7 +20,25 @@ class ClientController extends Controller
 
     public function index()
     {
-        return view('client/index');
+        $data = [];
+
+       $obj = new \stdClass;
+       $obj->id = 1;
+       $obj->title = 'mr';
+       $obj->name = 'Igor';
+       $obj->last_name = 'Silva';
+       $obj->email = 'igor.silva9813@gmail.com';
+       $data['clients'][] = $obj;
+    
+       $obj = new \stdClass;
+       $obj->id = 2;
+       $obj->title = 'ms';
+       $obj->name = 'Rita';
+       $obj->last_name = 'Pereira';
+       $obj->email = 'ritapereira@gmail.com';
+       $data['clients'][] = $obj;
+    
+       return view('client/index', $data);
     }
 
     public function newClient()

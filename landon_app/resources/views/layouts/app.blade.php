@@ -10,7 +10,7 @@
             <link rel="stylesheet" href="{{ asset('pickadate/lib/themes/default.date.css') }}">
     <meta class="foundation-mq"></head>
     <body>
-
+      
         <!-- Start Top Bar -->
     <div class="top-bar">
       <div class="row">
@@ -34,7 +34,7 @@
     <div class="row column">
       <hr>
       <ul class="menu">
-        <li class="float-right">Copyright 2017</li>
+        <li class="float-right">Copyright 2019</li>
       </ul>
     </div>
 
