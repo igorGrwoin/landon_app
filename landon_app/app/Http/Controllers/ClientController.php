@@ -45,7 +45,8 @@ class ClientController extends Controller
     {
         $data = [];
         $data['titles'] = $this->titles;
-        return view('client/newClient', $data);
+        $data['modified'] = 0;
+        return view('client/form', $data);
     }
 
     public function create()
@@ -55,6 +56,8 @@ class ClientController extends Controller
 
     public function show($client_id)
     {
-        return view('client/show');
+        $data['titles'] = $this->titles;
+        $data['modified'] = 1;
+        return view('client/form', $data);
     }
 }
