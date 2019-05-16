@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
-<div class="row">
+    <div class="row">
       <div class="medium-6 columns">
         <h4>Landon Hotel App</h4>
         <img class="thumbnail" src="images/attractions.jpg">
@@ -13,5 +12,4 @@
         <p>To learn more about the Landon Hotel in the West End, browse our website and download our handy information sheet.</p>
       </div>
     </div>
-
 @endsection
