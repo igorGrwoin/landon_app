@@ -67,7 +67,7 @@ class ClientController extends Controller
 
         $data['titles'] = $this->titles;
         $data['modified'] = 0;
-        
+
         return view('client/form', $data);
     }
 
