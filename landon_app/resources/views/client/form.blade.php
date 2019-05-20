@@ -4,7 +4,7 @@
 <div class="row">
       <div class="medium-12 large-12 columns">
         <h4>{{ $modified == 1 ? 'Modify Client' : 'New Client' }}</h4>
-        <form action="{{ $modified == 1 ? route('update_client', [ 'client_id' => 1 ]) : route('create_client')  }}" method="post">
+        <form action="{{ $modified == 1 ? route('update_client', [ 'client_id' => $client_id ]) : route('create_client')  }}" method="post">
           <div class="medium-4  columns">
             <label>Title</label>
             <select name="title">
