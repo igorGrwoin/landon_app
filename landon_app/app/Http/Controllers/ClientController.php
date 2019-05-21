@@ -10,11 +10,7 @@ use App\Client as Client;
 class ClientController extends Controller
 {
     //
-<<<<<<< HEAD
-    public function __construct( Title $titles, Client $client)
-=======
-    public function __construct( Title $titles )
->>>>>>> f0967900bf872d073fb577655af2ea0b48c1af2c
+    public function __construct( Title $titles, Client $client )
     {
         $this->titles = $titles->all();
         $this->client = $client->all();
@@ -30,34 +26,12 @@ class ClientController extends Controller
     {
         $data = [];
 
-<<<<<<< HEAD
        $data['clients'] = $this->client->all();
-=======
-       $obj = new \stdClass;
-       $obj->id = 1;
-       $obj->title = 'mr';
-       $obj->name = 'Igor';
-       $obj->last_name = 'Silva';
-       $obj->email = 'igor.silva9813@gmail.com';
-       $data['clients'][] = $obj;
-    
-       $obj = new \stdClass;
-       $obj->id = 2;
-       $obj->title = 'ms';
-       $obj->name = 'Rita';
-       $obj->last_name = 'Pereira';
-       $obj->email = 'ritapereira@gmail.com';
-       $data['clients'][] = $obj;
->>>>>>> f0967900bf872d073fb577655af2ea0b48c1af2c
     
        return view('client/index', $data);
     }
 
-<<<<<<< HEAD
     public function newClient( Request $request, Client $client)
-=======
-    public function newClient( Request $request)
->>>>>>> f0967900bf872d073fb577655af2ea0b48c1af2c
     {
         $data = [];
 
@@ -69,21 +43,11 @@ class ClientController extends Controller
         $data['city'] = $request->input('city');
         $data['state'] = $request->input('state');
         $data['email'] = $request->input('email');
-<<<<<<< HEAD
     
 
         if( $request->isMethod('POST'))
         {
            #dd($data);exit;
-=======
-       
-        $data['titles'] = $this->titles;
-        $data['modified'] = 0;
-
-        if( $request->isMethod('POST'))
-        {
-            //dd($data);
->>>>>>> f0967900bf872d073fb577655af2ea0b48c1af2c
             $this->validate(
                $request,
                [
@@ -96,7 +60,6 @@ class ClientController extends Controller
                ] 
             );
 
-<<<<<<< HEAD
             $client->insert($data);
 
             return redirect('clients');
@@ -105,11 +68,6 @@ class ClientController extends Controller
         $data['titles'] = $this->titles;
         $data['modified'] = 0;
 
-=======
-            return redirect('clients');
-        }
-
->>>>>>> f0967900bf872d073fb577655af2ea0b48c1af2c
         return view('client/form', $data);
     }
 
@@ -120,7 +78,6 @@ class ClientController extends Controller
 
     public function show($client_id)
     {
-<<<<<<< HEAD
         $data = []; $data['client_id'] = $client_id;
         $data['titles'] = $this->titles;
         $data['modified'] = 1;
@@ -196,10 +153,4 @@ class ClientController extends Controller
 
 
     
-=======
-        $data['titles'] = $this->titles;
-        $data['modified'] = 1;
-        return view('client/form', $data);
-    }
->>>>>>> f0967900bf872d073fb577655af2ea0b48c1af2c
 }
