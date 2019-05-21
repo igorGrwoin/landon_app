@@ -15,9 +15,12 @@ class CreateRoomsTable extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->increments('id');
+<<<<<<< HEAD:landon_app/database/migrations/2017_06_19_215505_create_rooms_table.php
             $table->string('name');
             $table->integer('floor');
             $table->text('description');
+=======
+>>>>>>> f0967900bf872d073fb577655af2ea0b48c1af2c:landon_app/database/migrations/2017_06_19_215505_create_rooms_table.php
             $table->timestamps();
         });
     }
