@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Title as Title;
 use App\Client as Client;
 
-
 class ClientController extends Controller
 {
     //
@@ -76,7 +75,7 @@ class ClientController extends Controller
             return view('client/create');
     }
 
-    public function show($client_id)
+    public function show($client_id, Request $request)
     {
         $data = []; $data['client_id'] = $client_id;
         $data['titles'] = $this->titles;
@@ -94,6 +93,7 @@ class ClientController extends Controller
         $data['state'] = $client_data->state;
         $data['email'] = $client_data->email;
 
+        $request->session()->put('last_updated', $client_data->name . ' ' . $client_data->last_name);
 
         return view('client/form', $data);
     }
